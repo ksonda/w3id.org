@@ -11,20 +11,20 @@ AddType text/turtle .ttl
 
 RewriteEngine on
 
-#Rewrite rules for Asteroids vocabulary extension 
+#Rewrite rules for IoW Glossary
 RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+xml|text/\*|\*/\*)
 RewriteCond %{HTTP_ACCEPT} text/html [OR]
 RewriteCond %{HTTP_ACCEPT} application/xhtml\+xml [OR]
 RewriteCond %{HTTP_ACCEPT} text/\* [OR]
 RewriteCond %{HTTP_ACCEPT} \*/\* [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
-RewriteRule ^asteroids$ http://dgarijo.github.io/VideoGameOntology/GameExtensions/AsteroidsOntology/asteroidsDoc/  [R=303,NE,L]
+RewriteRule ^asteroids$ http://github.com/ksonda/internetofwater/GlossaryOntology/glossaryDoc/  [R=303,NE,L]
 RewriteCond %{HTTP_ACCEPT} ^.*application/rdf\+xml.* 
-RewriteRule ^asteroids$ http://dgarijo.github.io/VideoGameOntology/GameExtensions/AsteroidsOntology/asteroids.owl [R=303,NE,L]
+RewriteRule ^asteroids$ http://github.com/ksonda/internetofwater/GlossaryOntology/glossary.owl [R=303,NE,L]
 RewriteCond %{HTTP_ACCEPT} ^.*text/turtle.* 
-RewriteRule ^asteroids$ http://dgarijo.github.io/VideoGameOntology/GameExtensions/AsteroidsOntology/asteroids.ttl [R=303,NE,L]
+RewriteRule ^asteroids$ http://github.com/ksonda/internetofwater/GlossaryOntology/glossary.ttl [R=303,NE,L]
 #default response: owl
-RewriteRule ^asteroids$ http://dgarijo.github.io/VideoGameOntology/GameExtensions/AsteroidsOntology/asteroids.owl [R=303,NE,L]
+RewriteRule ^asteroids$ http://github.com/ksonda/internetofwater/GlossaryOntology/glossary.owl [R=303,NE,L]
 
 #Rewrite rules for Coil vocabulary extension
 RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+xml|text/\*|\*/\*)
